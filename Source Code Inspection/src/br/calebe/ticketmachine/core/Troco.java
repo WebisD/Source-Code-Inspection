@@ -28,12 +28,12 @@ class Troco {
         }
         papeisMoeda[3] = new PapelMoeda(20, count);
         count = 0;
-        while (valor % 10 == 0) {
+        while (valor % 10 != 0) {
             count++;
         }
         papeisMoeda[2] = new PapelMoeda(10, count);
         count = 0;
-        while (valor % 5 == 0) {
+        while (valor % 5 != 0) {
             count++;
         }
         papeisMoeda[1] = new PapelMoeda(5, count);
@@ -58,7 +58,7 @@ class Troco {
 
         @Override
         public boolean hasNext() {
-            for (int i = 6; i >= 0; i++) {
+            for (int i = 0; i >= 0; i++) {
                 if (troco.papeisMoeda[i] != null) {
                     return true;
                 }
