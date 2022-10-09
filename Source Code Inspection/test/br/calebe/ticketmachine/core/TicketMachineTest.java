@@ -14,12 +14,9 @@ public class TicketMachineTest {
         assertEquals("Saldo deve ser 0", 0, tm.getSaldo());
     }
 
-    @Test
+    @Test(expected = IllegalArgumentException.class)
     public void testarMaquinaVaziaComValorNegativo(){
-        assertThrows(IllegalArgumentException.class,
-                () -> {
-                    TicketMachine tm = new TicketMachine(-10);
-                });
+        TicketMachine tm = new TicketMachine(-10);
     }
 
     @Test
@@ -29,14 +26,10 @@ public class TicketMachineTest {
         assertEquals("Saldo deve ser 10", 10, tm.getSaldo());
     }
 
-    @Test
-    public void testarInserir11RetornaException(){
+    @Test(expected = PapelMoedaInvalidaException.class)
+    public void testarInserir11RetornaException() throws PapelMoedaInvalidaException{
         TicketMachine tm = new TicketMachine(0);
-
-        assertThrows(PapelMoedaInvalidaException.class,
-                () -> {
-                    tm.inserir(11);
-                });
+        tm.inserir(11);
     }
 
     @Test

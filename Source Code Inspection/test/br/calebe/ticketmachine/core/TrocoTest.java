@@ -10,12 +10,9 @@ public class TrocoTest {
     @Rule
     public Timeout globalTimeout = Timeout.seconds(10);
 
-    @Test
+    @Test(expected = IllegalArgumentException.class)
     public void testarTrocoComValorNegativo(){
-        assertThrows(IllegalArgumentException.class,
-                () -> {
-                    Troco tr = new Troco(-10);
-                });
+        Troco tr = new Troco(-10);
     }
 
     @Test
