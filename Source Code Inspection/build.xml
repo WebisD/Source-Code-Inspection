@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project basedir="." default="default" name="Source_Code_Inspection">
+    <import file="nbproject/build-impl.xml"/>
+    <property name="testdir" location="test"/>
+    <property name="srcdir" location="src"/>
+    <property name="full-compile" value="true"/>
+    <path id="classpath.base"/>
+
+    <path id="classpath.test">
+        <pathelement location="../lib/junit-4.12.jar"/>
+        <pathelement location="${testdir}"/>
+        <pathelement location="${srcdir}"/>
+        <path refid="classpath.base"/>
+    </path>
+
+    <!-- <target name="clean">
+        <delete verbose="${full-compile}">
+            <fileset dir="${testdir}" includes="**/*.class"/>
+        </delete>
+    </target>  -->
+
+    <target name="test">
+        <junit>
+            <classpath refid="classpath.test"/>
+            <formatter usefile="false" type="brief"/>
+            <test name="TestTroco"/>
+        </junit>
+    </target>
+
+</project>
