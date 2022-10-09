@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project basedir="." default="default" name="Source_Code_Inspection">
     <import file="nbproject/build-impl.xml"/>
-    <property name="testdir" location="test"/>
+    <property name="testdir" location="test/br/calebe/ticketmachine/core"/>
     <property name="srcdir" location="src"/>
     <property name="full-compile" value="true"/>
     <path id="classpath.base"/>
@@ -20,7 +20,7 @@
     </target>  -->
 
     <target name="test">
-        <junit>
+        <junit printsummary="on">
             <classpath refid="classpath.test"/>
             <formatter usefile="false" type="brief"/>
             <test name="TicketMachineTest"/>
