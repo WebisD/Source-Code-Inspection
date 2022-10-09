@@ -11,7 +11,7 @@
     <description>Builds, tests, and runs the project Source Code Inspection.</description>
     <import file="nbproject/build-impl.xml"/>
     <path id="classpath.test">
-        <pathelement location="lib/junit-4.12.jar"/>
+        <pathelement location="../lib/junit-4.12.jar"/>
     </path>
     <!--
 
