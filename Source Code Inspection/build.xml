@@ -19,11 +19,21 @@
         </delete>
     </target>  -->
 
-    <target name="test">
-        <junit printsummary="on">
+    <target name="test-compile">
+        <javac srcdir="${srcdir}" includeantruntime="false">
             <classpath refid="classpath.test"/>
-            <formatter usefile="false" type="brief"/>
-            <test name="TicketMachineTest"/>
+        </javac>
+    </target>
+
+    <target name="test" depends="test-compile">
+        <junit printsummary="on" haltonfailure="yes" fork="true">
+            <classpath>
+                <path refid="classpath.test"/>
+            </classpath>
+            <formatter type="brief" usefile="false" />
+            <batchtest>
+                <fileset dir="${testdir}" includes="**/*Test.java" />
+            </batchtest>
         </junit>
     </target>
 
