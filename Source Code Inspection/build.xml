@@ -10,6 +10,9 @@
 <project name="Source_Code_Inspection" default="default" basedir=".">
     <description>Builds, tests, and runs the project Source Code Inspection.</description>
     <import file="nbproject/build-impl.xml"/>
+    <path id="classpath.test">
+        <pathelement location="lib/junit-4.12.jar"/>
+    </path>
     <!--
 
     There exist several targets which are by default empty and which can be 
