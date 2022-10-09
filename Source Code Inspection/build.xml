@@ -19,7 +19,11 @@
         </delete>
     </target>  -->
 
-    <target name="test-compile">
+    <target name="compile">
+        <javac srcdir="${srcdir}" includeantruntime="false"/>
+    </target>
+
+    <target name="test-compile" depends="compile">
         <javac srcdir="${srcdir}" includeantruntime="false">
             <classpath refid="classpath.test"/>
         </javac>
