@@ -23,7 +23,7 @@
         <junit>
             <classpath refid="classpath.test"/>
             <formatter usefile="false" type="brief"/>
-            <test name="TestTroco"/>
+            <test name="TicketMachineTest"/>
         </junit>
     </target>
 
