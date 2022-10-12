@@ -2,7 +2,7 @@
 <project basedir="." default="default" name="Source_Code_Inspection">
     <import file="nbproject/build-impl.xml"/>
     <property name="testdir" location="test/br/calebe/ticketmachine/core"/>
-    <property name="srcdir" location="src/br/calebe/ticketmachine"/>
+    <property name="srcdir" location="src/br/calebe/ticketmachine/core"/>
     <property name="excep" location="src/br/calebe/ticketmachine/exception"/>
     <property name="full-compile" value="true"/>
     <path id="classpath.base"/>

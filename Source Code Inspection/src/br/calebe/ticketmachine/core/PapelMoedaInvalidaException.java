@@ -1,4 +1,4 @@
-package br.calebe.ticketmachine.exception;
+package br.calebe.ticketmachine.core;
 
 /**
  *
