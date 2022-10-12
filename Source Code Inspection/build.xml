@@ -27,6 +27,9 @@
     </target>
 
     <target name="test-compile" depends="compile">
+        <javac srcdir="${excep}" includeantruntime="false">
+            <classpath refid="classpath.test"/>
+        </javac>
         <javac srcdir="${srcdir}" includeantruntime="false">
             <classpath refid="classpath.test"/>
         </javac>
