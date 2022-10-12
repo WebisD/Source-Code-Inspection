@@ -22,6 +22,7 @@
     </target>  -->
 
     <target name="compile">
+        <javac srcdir="${excep}" includeantruntime="false"/>
         <javac srcdir="${srcdir}" includeantruntime="false"/>
     </target>
 
